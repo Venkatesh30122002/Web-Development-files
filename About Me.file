@@ -1,0 +1,78 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name - Web Developer Portfolio</title>
+<link rel="stylesheet" herf="styles.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav>
+<div class="container">
+<h1>MY Web Site</h1>
+<ul>
+<li><a href="#home>Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<div>
+</nav>
+<!-- Home  Section -->
+<section id="home">
+<div class="intro">
+<h2>Passionate Web Developer</h2>
+<img src="P.Venkatesh.photo.jpg" alt="Patnana Venkatesh">
+<p>Welcome to my portfolio! I specialize in creating modern and engaging websites and web applications.</p>
+<p>Sills:- HTML, CSS, JavaScript, React, Node.js, SQL</p>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about"><div class="container">
+<div class="container">
+<h2>About Me</h2>
+<p>I am a dedicated web developer with a Bachelor's degree in compuer Science from Srikakulam University. Over the past one year, I have gained extensive experience in front-end and back-end development, working with various technologies to deliver high-quality solutions to clients.</p>
+<p>My expertise includes:</p>
+<ul>
+<li>Front-end development using HTML, CSS, and JavaScript frameworks such as React</li>
+<li>Back-end developement with Node.js and Epress</li>
+<li>Database design and mangement using SQL and MongoDB</li>
+</ul>
+</div>
+</section>
+<!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <!-- Add your projects here -->
+      <div class="project">
+        <h3>Project 1</h3>
+        <p>Description of Project 1</p>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>Description of Project 2</p>
+      </div>
+      <!-- Add more projects as needed -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out to me for any inquiries or collaboration opportunities!</p>
+      <!-- Add contact form or contact information -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Patnana Venkatesh. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
