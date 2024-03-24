@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Patnana
+        </title>
+        <style>
+            body {
+                margion: 2;
+                fornt-family: Arial, sana-serif;
+            }
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color:#FF0000;
+                padding: 10px 0;
+                z-index: 1000;
+                transition: background-colour #0000FF ease;
+            }
+            .navbar ul {
+                list-style-type: none;
+                margin: 2;
+                padding: 2;
+                text-align: center;
+            }
+            .navbar li {
+                display: inline;
+            }
+            .navbar a {
+                color: #FFO;
+                text-decoration: none;
+                padding: 10px 20px;
+                transition: background-color #556B2F;
+            }
+            .navbar a:hover {
+                backfrouind-color:#666;
+            }
+            </style>
+            </heda>
+            <body>
+                <div class="navbar" id="navbar">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div style="height:1000px" padding-top:50px;">
+                <!-- Content to create scroll -->
+                </div>
+                <script>
+                window.onscroll function() {scrollFunction()};
+                function scroollFunction() {
+                if (document.body.scrollTop > 50||
+                document.documentElement.scrollTop > 50) {
+                document.getElementById("navbar").style.backgroungColor="black";
+                }
+                else
+                {
+                document.getElementById("navbar").style.backgroundcolor="violet";
+                }
+                }
+                </script>
+                </body>
+</html>
