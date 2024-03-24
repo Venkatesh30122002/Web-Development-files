@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .btn {
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    #time {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div id="time">00:00:00</div>
+  <button class="btn" id="start">Start</button>
+  <button class="btn" id="pause">Pause</button>
+  <button class="btn" id="reset">Reset</button>
+  <button class="btn" id="lap">Lap</button>
+  <ul id="laps"></ul>
+</div>
+
+<script>
+  let timer;
+  let startTime;
+  let elapsedTime = 0;
+  let running = false;
+  
+  function displayTime() {
+    const formattedTime = new Date(elapsedTime).toISOString().substr(11, 8);
+    document.getElementById('time').textContent = formattedTime;
+  }
+
+  function startTimer() {
+    startTime = Date.now() - elapsedTime;
+    timer = setInterval(function() {
+      elapsedTime = Date.now() - startTime;
+      displayTime();
+    }, 10);
+    running = true;
+  }
+
+  function pauseTimer() {
+    clearInterval(timer);
+    running = false;
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    elapsedTime = 0;
+    displayTime();
+    running = false;
+    document.getElementById('laps').innerHTML = '';
+  }
+
+  function lapTimer() {
+    if (running) {
+      const lapTime = elapsedTime;
+      const formattedLapTime = new Date(lapTime).toISOString().substr(11, 8);
+      const lapItem = document.createElement('li');
+      lapItem.textContent = formattedLapTime;
+      document.getElementById('laps').appendChild(lapItem);
+    }
+  }
+
+  document.getElementById('start').addEventListener('click', function() {
+    if (!running) {
+      startTimer();
+    }
+  });
+
+  document.getElementById('pause').addEventListener('click', function() {
+    if (running) {
+      pauseTimer();
+    }
+  });
+
+  document.getElementById('reset').addEventListener('click', function() {
+    resetTimer();
+  });
+
+  document.getElementById('lap').addEventListener('click', function() {
+    lapTimer();
+  });
+</script>
+
+</body>
+</html>
